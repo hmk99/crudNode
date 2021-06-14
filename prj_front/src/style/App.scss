@@ -1,0 +1,132 @@
+@mixin flex($direction,$justCtn) {
+    display:flex;
+    justify-content: $justCtn;
+    align-items: center;
+    flex-direction: $direction;
+}
+.App {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    @include flex(column,space-evenly);
+  }
+  .head{
+    width: 100%;
+    height: 50%;
+    width:50%;
+    @include flex(column,space-evenly);
+}
+  form{
+    background: #2980B9;
+    background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9);  
+    background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); 
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius:10px;
+    height: 10vh;
+    width:50%;
+    @include flex(row,space-evenly);
+  }
+  form input,input{
+    border-radius: 7px;
+    border: none;
+    width: 200px;
+    height: 20px;
+  }
+  
+  #ok,#del,#upd{
+    font-style: italic;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  /*
+  #ok{
+    background-color: rgb(145, 145, 145);
+  }
+  #ok:hover{
+    background-color: rgb(121, 239, 255);
+    color: blue;
+    border:black 1px solid;
+  }
+  #del:hover{
+    background-color: rgb(255, 121, 121);
+    color: red;
+    border:black 1px solid;
+  }
+  #upd:hover{
+    background-color: rgb(121, 255, 172);
+    color: green;
+    border:black 1px solid;
+  }
+  */
+  .todos{
+    @include flex(column,space-evenly);
+    width:50%;
+    min-height: 50vh;
+    height: auto;
+    gap: 20px; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+  .todo{
+    border: solid 1px black;
+    border-radius:20px;
+    background-color: lightgreen;
+    @include flex(row,space-between);
+    width:100%;
+    height: 20%;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+  .todo h3{
+    color: white;
+  }
+  .btn{
+    width: 30%;
+    height: 100%;
+    @include flex(row,space-evenly);
+  }
+  #field{
+    height: 1px;
+    width:200px;
+    background-color: white;
+  }
+  .paginationBtns{
+    color:white;
+    background-color: black;
+    border-radius:10px;
+    border:1px solid black;
+    @include flex(row,space-evenly);
+    height: 5vh;
+    width:50%;
+    list-style: none;
+  }
+  .paginationBtns a{
+    cursor: pointer;
+    font-style: oblique;
+    font-weight: bolder;
+    border: white 1px solid;
+    border-radius: 80px;
+    padding: 5px;
+  }
+  .paginationBtns a:hover{
+    color: #17179c;
+    background-color: white;
+  }
+  .pagintationActive a{
+    color: #17179c;
+    background-color: white;
+  }
+  .search_form{
+    background-color: red;
+    @include flex(row,space-between);
+    height: 5vh;
+    width: 50%;
+    border: solid 1px black;
+  }

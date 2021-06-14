@@ -1,0 +1,11 @@
+{
+                isAuthorized ? <>
+                    {/* Write all routes need an authentified user */}
+                    <Route path="/" component={'auth'} />
+                    <Redirect from="*" to="/error" />
+                </> : <>
+                    {/* Write all routes for the authentification */}
+                    <Route path="/" component={'no-auth'} />
+                    <Redirect from="*" to="/error" />
+                </>
+            }
